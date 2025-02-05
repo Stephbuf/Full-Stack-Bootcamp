@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <style>
+        body {
+            text-align: center;
+            font-family: 'Quicksand', sans-serif;
+            background-image: url("PinkBackground.jpg"); 
+            background-size: cover; 
+            background-position: center;
+            background-repeat: no-repeat;
+            margin: 0;
+            height: 100vh; 
+        }
+
+        button {
+            background-color: lightcoral;
+            color: white; 
+            width: 25%;
+            height: 40px;
+            border-radius: 8px;
+            border: none;
+            font-size: 40px;
+        }
+
+        form {
+            margin-top: 150px;
+            display: inline-block; 
+            background: rgba(255, 255, 255, 0.8); 
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); 
+        }
+
+        .form-group {
+            display: flex; 
+            justify-content: flex-start; 
+            align-items: center; 
+            margin-bottom: 20px;
+        }
+
+        .form-group label {
+            font-size: 20px; 
+            width: 150px;
+            text-align: right;
+            margin-right: 10px; 
+        }
+
+        .form-group input[type="text"] {
+            width: 70%; 
+            height: 40px; 
+            border-radius: 8px; 
+            border: 1px solid #ccc; 
+            font-size: 20px; 
+            padding-left: 10px; 
+            background: aliceblue; 
+        }
+
+        .form-group input[type="checkbox"] {
+            width: auto; 
+        }
+
+        .form-group label.checkbox-label {
+            margin-left: 10px;
+            text-align: left;
+        }
+
+        a {
+            font-size: 16px;
+            text-decoration: none;
+            color: blue;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="form-group">
+            <label for="username">Username:</label>
+            <input type="text" id="username" placeholder="Enter your username">
+
+        </div>
+        <div class="form-group">
+            <label for="password">Password:</label>
+            <input type="text" id="password" placeholder="Enter your password">
+        </div>
+        <div class="form-group checkbox-group">
+            <input type="checkbox" id="show-password">
+            <label for="show-password" class="checkbox-label">Show Password</label>
+        </div>        
+        <div>
+            <button class="login-container" id="login" type="button" onclick="location.href='main.html';">
+                Login
+            </button>
+        </div>
+        <br>
+        <div>
+            <a href="register.html">Don't have an account? Create One</a>
+        </div>
+    </form>
+</body>
+</html>
