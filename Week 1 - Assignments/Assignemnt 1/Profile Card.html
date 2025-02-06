@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Business Card</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+        }
+        .card {
+            display: flex;
+            align-items: center;
+            background-color: #d9b7b1;
+            padding: 20px;
+            width: 600px;
+            height: 300px;
+            border-radius: 15px;
+            box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
+            position: relative;
+        }
+        .logo {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 200px;
+            height: 200px;
+            border: 2px solid rgba(0, 0, 0, 0.2);
+            border-radius: 50%;
+            text-align: center;
+            font-size: 32px;
+            font-family: 'Cursive', sans-serif;
+            color: #8c7364; 
+            flex-shrink: 0; 
+        }
+        .divider {
+            width: 2px;
+            height: 80%;
+            background-color: rgba(0, 0, 0, 0.2); 
+            margin-left: 50px; 
+        }
+        .info {
+            padding-left: 20px;
+            flex-grow: 1; 
+        }
+        .info h1 {
+            margin: 0;
+            font-size: 28px;
+            color: #4e3f36;
+        }
+        .info p {
+            margin: 5px 0;
+            color: #4e3f36;
+        }
+        .contact {
+            margin-top: 10px;
+            color: #4e3f36;
+            font-size: 16px;
+        }
+        .contact a {
+            text-decoration: none;
+            color: #4e3f36;
+        }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo" style="transform: translateX(+18px);">
+            SB
+        </div>
+        <div class="divider"></div>
+        <div class="info">
+            <h1>Stephanie Buffotot</h1>
+            <p>Full Stack Developer</p>
+            <div class="contact">
+                <p>778-229-4702</p>
+                <p><a href="mailto:stephaniebtot3@gmail.com">stephaniebtot3@gmail.com</a></p>
+
+            </div>
+        </div>
+    </div>
+</body>
+</html>
