@@ -36,3 +36,7 @@ h5 {
   'opsz' 24;
   vertical-align: middle;
 }
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Converts white to black */
+}

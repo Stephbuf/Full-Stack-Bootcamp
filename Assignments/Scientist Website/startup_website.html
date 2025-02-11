@@ -40,88 +40,99 @@
             </div>
         </div>
         <br>
-        <!-- Upcoming Events Title -->
+        <!-- Upcoming Events -->
         <h5>Upcoming Events:</h5>
-
-        <!-- Upcoming Events Section -->
-        <div class="border border-dark p-3 mb-4 border-opacity-25">
-            <div class="row g-3">
-                <div class="col-md-4">
-                    <div class="border border-dark p-2 border-opacity-25" style="background-color: rgba(219, 125, 156, 0.137)"> 
-                        <p class="text-black"><strong>National Astronomy Week 2025</strong><br>
-                            Location: London, UK <br>
-                            Date: February 1–9, 2025
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="border border-dark p-2 border-opacity-25" style="background-color: rgba(219, 125, 156, 0.137)"> 
-                        <p class="text-black"><strong>Science Talk 2025</strong><br>
-                            Location: Raleigh, North Carolina, USA<br>
-                            Date: April 3–4, 2025
-                        </p>
-                    </div>
-                </div>
-
-                <div class="col-md-4">
-                    <div class="border border-dark p-2 border-opacity-25" style="background-color: rgba(219, 125, 156, 0.137)"> 
-                        <p class="text-black"><strong>National Conference on Science Education</strong><br>
-                            Location: Philadelphia, Pennsylvania, USA<br>
-                            Date: March 26–29, 2025
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Articles Section -->
-        <h5>Articles:</h5>
-        <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style= "background-color: rgba(219, 125, 156, 0.137);">
-                        <strong>Are the Internet and AI Affecting our Memory? What the Science Says</strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
-                    <div class="accordion-body">
-                        Search engines, GPS maps, and other tech can alter our ability to learn and remember. Now scientists are working out what AI might do.
-                    </div>
-                </div>
-            </div>
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" style= "background-color: rgba(219, 125, 156, 0.137);">
-                        <strong>Government of Canada launches Canadian Genomics Strategy to Drive Innovation and Foster Economic Growth</strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        Canada’s researchers, businesses, and institutions are at the forefront of the genomics revolution, unlocking the potential of this transformative science to drive innovation across industries, address global challenges, and improve quality of life.
-                    </div>
-                </div>
-            </div>
-
-            <div class="accordion-item">
-                <h2 class="accordion-header">
-                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style= "background-color: rgba(219, 125, 156, 0.137);">
-                        <strong>A New Vaccine Approach Could Help combat Future Coronavirus Pandemics</strong>
-                    </button>
-                </h2>
-                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
-                    <div class="accordion-body">
-                        A new experimental vaccine developed by researchers at MIT and Caltech could offer protection against emerging variants of SARS-CoV-2, as well as related coronaviruses, known as sarbecoviruses, that could spill over from animals to humans.
-                    </div>
-                </div>
-            </div>
-        </div>
         <br>
+        <div id="carouselExampleIndicators" class="carousel slide mb-4">
+            <div class="carousel-indicators">
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+            </div>
+            <div class="carousel-inner">
+                <!-- Slide 1 -->
+                <div class="carousel-item active">
+                    <div class="d-flex flex-column justify-content-center align-items-center text-center" 
+                        style="height: 250px; background-color: rgba(219, 125, 156, 0.05);"> <!-- Reduced Opacity -->
+                        <h3 class="text-black"><strong>National Astronomy Week 2025</strong></h3>
+                        <p class="text-black">📍 London, UK<br>📅 February 1–9, 2025</p>
+                    </div>
+                </div>
+                <!-- Slide 2 -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column justify-content-center align-items-center text-center" 
+                        style="height: 250px; background-color: rgba(219, 125, 156, 0.05);"> <!-- Reduced Opacity -->
+                        <h3 class="text-black"><strong>Science Talk 2025</strong></h3>
+                        <p class="text-black">📍 Raleigh, North Carolina, USA<br>📅 April 3–4, 2025</p>
+                    </div>
+                </div>
+                <!-- Slide 3 -->
+                <div class="carousel-item">
+                    <div class="d-flex flex-column justify-content-center align-items-center text-center" 
+                        style="height: 250px; background-color: rgba(219, 125, 156, 0.05);"> <!-- Reduced Opacity -->
+                        <h3 class="text-black"><strong>National Conference on Science Education</strong></h3>
+                        <p class="text-black">📍 Philadelphia, Pennsylvania, USA<br>📅 March 26–29, 2025</p>
+                    </div>
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+        
+         <!-- Articles Section -->
+         <h5>Articles:</h5>
+         <div class="accordion mt-4" id="accordionPanelsStayOpenExample">
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true" aria-controls="panelsStayOpen-collapseOne" style= "background-color: rgba(219, 125, 156, 0.05);">
+                         <strong>Are the Internet and AI Affecting our Memory? What the Science Says</strong>
+                     </button>
+                 </h2>
+                 <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                     <div class="accordion-body">
+                         Search engines, GPS maps, and other tech can alter our ability to learn and remember. Now scientists are working out what AI might do.
+                     </div>
+                 </div>
+             </div>
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false" aria-controls="panelsStayOpen-collapseTwo" style= "background-color: rgba(219, 125, 156, 0.05);">
+                         <strong>Government of Canada launches Canadian Genomics Strategy to Drive Innovation and Foster Economic Growth</strong>
+                     </button>
+                 </h2>
+                 <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                     <div class="accordion-body">
+                         Canada’s researchers, businesses, and institutions are at the forefront of the genomics revolution, unlocking the potential of this transformative science to drive innovation across industries, address global challenges, and improve quality of life.
+                     </div>
+                 </div>
+             </div>
+ 
+             <div class="accordion-item">
+                 <h2 class="accordion-header">
+                     <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false" aria-controls="panelsStayOpen-collapseThree" style= "background-color: rgba(219, 125, 156, 0.05);">
+                         <strong>A New Vaccine Approach Could Help combat Future Coronavirus Pandemics</strong>
+                     </button>
+                 </h2>
+                 <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                     <div class="accordion-body">
+                         A new experimental vaccine developed by researchers at MIT and Caltech could offer protection against emerging variants of SARS-CoV-2, as well as related coronaviruses, known as sarbecoviruses, that could spill over from animals to humans.
+                     </div>
+                 </div>
+             </div>
+         </div>
+         <br>
+    
     <!---- Favorite Scientist Section ---->
 
     <h5>Favorite Scientist:</h5>
     <div class="col-12">
-        <div class="border border-dark p-3 mb-4 border-opacity-25" style="background-color: rgba(219, 125, 156, 0.137);">
+        <div class="border border-dark p-3 mb-4 border-opacity-25" style="background-color: rgba(219, 125, 156, 0.05);">
 
     <div class="favotirescientist-container">
         <div class="overflow-auto" style="text-align: left;"> Dr. Evelyn Carter’s favorite scientist is Marie Curie, the pioneering physicist and chemist who revolutionized the study of radioactivity. Curie’s groundbreaking discoveries, including the identification of polonium and radium, not only earned her two Nobel Prizes but also paved the way for advancements in medical treatments and nuclear physics. Dr. Carter admires Curie’s relentless curiosity, resilience in a male-dominated field, and dedication to science despite immense challenges. Inspired by Curie’s legacy, Dr. Carter strives to push the boundaries of quantum biochemistry, much like Curie transformed our understanding of radiation. </div>
