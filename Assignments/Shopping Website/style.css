@@ -1,0 +1,103 @@
+body {
+    font-family: "Nunito", sans-serif;
+}
+
+.jumbotron {
+    position: relative;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    height: 350px; /* Adjust as needed */
+    
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    padding: 0 25px;
+}
+
+.jumbotron::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: url('jumbotron_image.jpg') center/cover no-repeat;
+    opacity: 0.9;
+    z-index: -1;
+}
+
+.customlearn-btn{
+    background-color: rgba(230, 23, 161, 0.233); /* Set the background color */
+    color:black; /* Set the text color (darker green for contrast) */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.customlearn-btn:hover {
+    background-color:  rgba(218, 55, 163, 0.74);/* Darker background on hover */
+    color: white; /* Change text color on hover */
+}
+.custom-btn {
+    background-color:  white; /* Set the background color */
+    color:black; /* Set the text color (darker green for contrast) */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+}
+
+.custom-btn:hover {
+    background-color: rgba(230, 23, 161, 0.233); /* Darker background on hover */
+    color: white; /* Change text color on hover */
+}
+
+h2{
+    text-align: center;
+    color:rgba(230, 23, 161, 0.233);
+}
+
+h3,h4{
+    color: rgba(230, 23, 161, 0.233);
+}
+.about-container {
+    display: flex;
+    align-items: center; /* Moves text higher */
+    justify-content: center; /* Keeps text to the left */
+    height: 80vh; /* Reduces height so it moves up */
+    text-align: center; /* Aligns text content to the left */
+}
+.about-content {
+    max-width: 900px; /* Prevents the text from stretching too wide */
+
+}
+.about-container-background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh; /* Ensures full-page coverage */
+    background-image: url("about_background.jpg");
+    background-size: cover; /* Makes sure the image fills the screen */
+    background-position: center; /* Centers the background */
+    background-repeat: no-repeat; /* Prevents tiling */
+    background-attachment: fixed; /* Keeps it fixed while scrolling */
+    background-color: rgba(255, 255, 255, 0.75); /* Adds transparency */
+    background-blend-mode: overlay;
+    z-index: -1; /* Keeps background behind the content */
+}
+
+.card-img-top {
+    width: 100%; /* Ensures images take up the full width of the card */
+    height: 300px; /* Set a fixed height for all images */
+    object-fit: cover; /* Prevents distortion and crops excess image */
+}
+
+
+.container-new-items {
+    padding-top: 50px;
+    padding-left: 50px;
+    padding-right: 50px;
+}
+
+.new-in-btn:hover {
+    
+}
