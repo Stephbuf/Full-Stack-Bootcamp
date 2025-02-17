@@ -33,6 +33,7 @@ body {
     background-color: rgba(230, 23, 161, 0.233); /* Set the background color */
     color:black; /* Set the text color (darker green for contrast) */
     transition: all 0.3s ease-in-out; /* Smooth hover effect */
+    
 }
 
 .customlearn-btn:hover {
@@ -85,8 +86,6 @@ h3,h4{
     margin-top: -50px; /* Move text up */
 }
 
-
-
 .card-img-top {
     width: 100%; /* Ensures images take up the full width of the card */
     height: 300px; /* Set a fixed height for all images */
@@ -99,6 +98,9 @@ h3,h4{
     padding-right: 50px;
 }
 
+.new-in-btn:hover { 
+    font-size: 110%;
+}
 
 
 .carousel-control-prev-icon,
@@ -116,4 +118,29 @@ h3,h4{
     width: 300px; /* Set a fixed width (adjust as needed) */
     height: 500px; /* Set a fixed height (adjust as needed) */
     border-radius: 20px; /* Keeps rounded corners */
+}
+
+.signup-btn {
+    background-color:  rgb(230, 23, 161, 0.233); /* Set the background color */
+    color:black; /* Set the text color (darker green for contrast) */
+    transition: all 0.3s ease-in-out; /* Smooth hover effect */
+    background-position: center;
+
+
+}
+
+.signup-btn:hover {
+    background-color: rgba(230, 23, 161, 0.233); /* Darker background on hover */
+    color: white; /* Change text color on hover */
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Optional: Change color */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
 }
