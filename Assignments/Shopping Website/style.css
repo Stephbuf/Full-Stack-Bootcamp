@@ -24,8 +24,8 @@ body {
     left: 0;
     width: 100%;
     height: 100%;
-    background: url('jumbotron_image.jpg') center/cover no-repeat;
-    opacity: 0.9;
+    background: url('welcome_background.jpg') center/cover no-repeat;
+    opacity: 0.8;
     z-index: -1;
 }
 
@@ -36,7 +36,7 @@ body {
 }
 
 .customlearn-btn:hover {
-    background-color:  rgba(218, 55, 163, 0.74);/* Darker background on hover */
+    background-color:  rgba(230, 23, 161, 0.233);/* Darker background on hover */
     color: white; /* Change text color on hover */
 }
 .custom-btn {
@@ -52,38 +52,40 @@ body {
 
 h2{
     text-align: center;
-    color:rgba(230, 23, 161, 0.233);
+    color:rgba(230, 23, 23, 0.199);
 }
 
 h3,h4{
-    color: rgba(230, 23, 161, 0.233);
+    color:rgba(230, 23, 23, 0.199);
 }
 .about-container {
     display: flex;
-    align-items: center; /* Moves text higher */
-    justify-content: center; /* Keeps text to the left */
-    height: 80vh; /* Reduces height so it moves up */
-    text-align: center; /* Aligns text content to the left */
+    align-items: center; /* Aligns items vertically */
+    justify-content: space-between; /* Ensures space between image & text */
+    height: 100vh; /* Makes sure it covers the full viewport height */
+    width: 100%; /* Ensures it spans the full width */
 }
-.about-content {
-    max-width: 900px; /* Prevents the text from stretching too wide */
 
-}
 .about-container-background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh; /* Ensures full-page coverage */
+    flex: 1; /* Takes up exactly 50% of the space */
     background-image: url("about_background.jpg");
-    background-size: cover; /* Makes sure the image fills the screen */
-    background-position: center; /* Centers the background */
-    background-repeat: no-repeat; /* Prevents tiling */
-    background-attachment: fixed; /* Keeps it fixed while scrolling */
-    background-color: rgba(255, 255, 255, 0.75); /* Adds transparency */
-    background-blend-mode: overlay;
-    z-index: -1; /* Keeps background behind the content */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%; /* Fills the container height */
+    
 }
+
+.about-content {
+    flex: 1;
+    max-width: 50%;
+    padding: 50px;
+    text-align: center;
+    color: black;
+    margin-top: -50px; /* Move text up */
+}
+
+
 
 .card-img-top {
     width: 100%; /* Ensures images take up the full width of the card */
@@ -91,13 +93,27 @@ h3,h4{
     object-fit: cover; /* Prevents distortion and crops excess image */
 }
 
-
 .container-new-items {
     padding-top: 50px;
     padding-left: 50px;
     padding-right: 50px;
 }
 
-.new-in-btn:hover {
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+    filter: invert(1); /* Converts white to black */
+}
+
+.carousel-item {
+    height: 500px;
+    padding-left: 200px;
+    padding-right: 90px;
+}
     
+.carousel-inner img {
+    width: 300px; /* Set a fixed width (adjust as needed) */
+    height: 500px; /* Set a fixed height (adjust as needed) */
+    border-radius: 20px; /* Keeps rounded corners */
 }
