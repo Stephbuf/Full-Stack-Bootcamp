@@ -1,10 +1,3 @@
-/*
-1) Get the height and weight of a person
-2) Use the BMI formula to compute the person's BMI
-3) Based on the BMI value, get body type
-4) Print the result (body type) to the web page
-
-*/
 
 document.getElementById("btn").addEventListener("click", function() {
 
