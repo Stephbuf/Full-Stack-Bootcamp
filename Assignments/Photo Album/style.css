@@ -1,0 +1,46 @@
+.jumbotron {
+    position: relative;
+    color: white;
+    text-align: center;
+    overflow: hidden;
+    height: 350px; /* Adjust as needed */
+
+    /* Center content */
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centers vertically */
+    align-items: center; /* Centers horizontally */
+    padding: 0 25px;
+    background: url('welcome.jpg');    
+    opacity: 75%;
+    
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white; /* Optional: Change color */
+    text-align: center;
+    padding: 10px 0;
+    font-size: 10px;
+}
+
+    .carousel-item img {
+        width: 100%; /* Make images fill the carousel width */
+        height: 600px; /* Set a fixed height for all images */
+        object-fit: cover; /* Crop images to fill the area without distortion */
+    }
+
+    .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+        display: block;
+    }
+    
+    .navbar-brand {
+        position: fixed;
+     
+    }
