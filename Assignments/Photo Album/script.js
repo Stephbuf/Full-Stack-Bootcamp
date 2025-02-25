@@ -47,3 +47,24 @@ $(document).ready(function () {
 
     $('#feedbackForm').on('submit', validateForm);
 });
+
+
+//Photo Selection
+
+document.addEventListener('DOMContentLoaded', function() {
+    const selectElement = document.getElementById('inputImageTitle');
+    const imageElement = document.getElementById('selectedImage');
+  
+    selectElement.addEventListener('change', function() {
+      const selectedImage = this.value;
+  
+      if(selectedImage) {
+        imageElement.src = selectedImage;
+        imageElement.classList.remove('d-none');
+      } else {
+        imageElement.src = "";
+        imageElement.classList.add('d-none');
+      }
+    });
+  });
+  

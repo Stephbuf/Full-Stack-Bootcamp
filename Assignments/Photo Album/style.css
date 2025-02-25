@@ -44,3 +44,8 @@
         position: fixed;
      
     }
+
+    #selectedImage {
+        height: 300px;    
+    }
+    
