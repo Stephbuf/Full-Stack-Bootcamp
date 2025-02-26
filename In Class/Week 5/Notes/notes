@@ -1,0 +1,8 @@
+GET: Fetch some resourses from the server
+POST: Create a resource on the server
+PUT: Full update a resounse on the server
+PATCH: Partial update a resource on server
+DELETE: delete a resource on server
+
+All create a REST API = Application Programmer Interface 
+"S" in REST = Stateless, user requests are all independent. Just replying to request 

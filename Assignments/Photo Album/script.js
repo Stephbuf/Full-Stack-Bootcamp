@@ -29,7 +29,7 @@ $(document).ready(function () {
             isValid = false;
         }
 
-        // If the form is valid, log data to console
+        // If the form is valid, proceed
         if (isValid) {
             console.log("Form Submitted Successfully!");
             console.log("Username:", Username);
