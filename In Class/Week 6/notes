@@ -1,0 +1,75 @@
+##Terms
+
+HTTP- Hypertext Transfer Protocol
+API- Application Programming Interface
+REST- REpresentational State Transfer
+
+## HTTP Methods
+
+CRUD:
+- Create
+- Read
+- Update
+- Delete
+
+|Method  | Use                                                                        |
+---------|----------------------------------------------------------------------------|
+|'GET'   |Read - Used to request data from the webserver                              |
+|'POST'  |Create - Used to request to the creation of a new resource on the webserver |
+|'Delete'|Delete - Used to request the deletion of an existing resouce                |
+|'Patch' |Update - Request an existing resource have some onf its fields updated      |
+|'Put'   |Update - Request an existing resouce have ALL of the fields REPLACED        |
+
+
+'''json
+// Original Data 
+
+{
+    year:2004,
+    make:"Audi:,
+    model:"TT",
+}
+
+// Patch
+{
+    year:2007
+}
+
+New data:
+
+{
+    year:2007,
+    make:"Audi:,
+    model:"TT",
+}
+
+// Put 
+{
+    year:2007
+}
+
+New data:
+{
+    year:2007,
+    make:null,
+    model:null,
+}
+
+// HTTP Status Codes
+
+ Success:200
+ Created Successfully: 201
+ Validation Error: 400
+ Authentication Error: 401
+ Data Missing: 404
+ Internal Server Error: 500 
+
+## Error Ranges
+
+ |Range | Meaning                 |
+ |------|-------------------------|
+ |'1##' | Informational           |
+ |'2##' | Success                 |
+ |'3##' | Redirection             |
+ |'4##' | Client Error            |
+ |'5##' | Server Error            |
