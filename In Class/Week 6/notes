@@ -73,3 +73,27 @@ New data:
  |'3##' | Redirection             |
  |'4##' | Client Error            |
  |'5##' | Server Error            |
+
+ 
+ |Code  | Meaning                                                                              |
+ |------|--------------------------------------------------------------------------------------|
+ |'100' | Continute                                                                            |
+ |'102' | Processing                                                                           |
+ |'200' | Ok                                                                                   |
+ |'201' | Created - Use after a POST request                                                   |
+ |'202' | Accepted - Webserver validated and accepted request but has not been acted on it yet |
+ |'203' | Non-Authoritative information - served a cashed version of the cite from a CDN       |
+ |'204' | No content                                                                           |
+ |'301' | Moved Permanently                                                                    |
+ |'302" | Found                                                                                |
+ |'307' | Temporary Redirect                                                                   |
+ |'308' | Permanent Redirect                                                                   |
+ |'400' | Bad Request                                                                          |
+ |'401' | Unothorized - unauthenticated                                                        |
+ |'403" | Forbidden                                                                            |
+ |'404' | Not Found                                                                            |
+ |'418' | I am a tea pot                                                                       |
+ |'500' | Internal Server Error
+ |'501' | Not Implemented 
+ |'503' | Service Unavailable 
+ |'504' | Gateway Timeout
