@@ -61,3 +61,70 @@ Enum('Spade', 'Club', Heart', 'Diamonds')
 > Stored as an integer (32bits)
 > Stored as the number of seconds since the unix epoch
 `1970-01-01 000:00:01 UTC to `2038-01-19 03:14:07`
+
+
+## RELATIONAL DATABAS DESIGN:
+
+##Steps 
+
+1. Entities
+2. Relations 
+    - A belongs to B
+    - B has many A
+    - B has one C
+    - C belongs to many A
+3. Columns 
+4. Is our database normalized?
+    - if not: normalize, GOTO 1
+    - if yes: continue
+5. Diagram (ERD, Crows-Foot notation)
+6. Create the databse
+    -Write SQL, or use a GUI
+    - DDL (Data Definition Language), (CREATE, DROP, ALTER, TRUNCATE)
+7. Write the server side service 
+    - Example for RoboGarden Class:
+        - Connects to SQL using Sequilize
+        - Serves data using Express
+        - Serves data using Express.JS
+8. Write the client side service
+    - JavaScript file with functions to call backend service using HTTP API
+
+
+  ### Step 1. Define Entities
+
+  | Table Name | Description                                                   | Column          |
+  -------------|---------------------------------------------------------------|-----------------|
+  | Book       | All books that the store sells (books may not be in stock)    | Published Date  |
+  | Genre      | Genres                                                        |                 |
+  | Author     | Authors                                                       |                 |
+  | Publisher  | Publishers                                                    |                 |
+  | Location   | Where book can be found                                       |                 |
+  | Customer   | Users with accounts on the web store, might not have ordered  |                 |
+  | Order      | An order of books made by a customer                          | Copies Sold     |
+  | Cart       | A potential order of books by a customer                      |                 |
+
+
+## Step 2. Define Data Relationships
+
+- Book 
+    - `books` Have one or many `genres`
+    - `genres` Have one or many `books`
+    - `books` Have one or many  `authors`
+    - `authors` Have one or many `books`
+    - `book` Has one `publisher`
+    - `publishers` Have one or many `book`
+    - `book` Have one or many `location`
+    - `location` Have one or many `book`
+    - `book` Have one or many `order`
+    - `order` Have one or many `book`
+    - `book` Have one or many `cart`
+    - `cart` Have one or many `book`
+
+- Genre
+    - `genre` Have one or many `book`
+
+
+
+
+
+    
