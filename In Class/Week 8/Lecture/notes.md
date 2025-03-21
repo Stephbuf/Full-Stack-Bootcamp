@@ -100,8 +100,8 @@ Enum('Spade', 'Club', Heart', 'Diamonds')
   | Publisher  | Publishers                                                    |                 |
   | Location   | Where book can be found                                       |                 |
   | Customer   | Users with accounts on the web store, might not have ordered  |                 |
-  | Order      | An order of books made by a customer                          | Copies Sold     |
-  | Cart       | A potential order of books by a customer                      |                 |
+  | Order      | An order of books made by a customer                          | Copies Sold, IsCart     |
+  | Cart       | A potential order of books by a customer                      | IsOrdered       |
 
 
 ## Step 2. Define Data Relationships
@@ -123,8 +123,86 @@ Enum('Spade', 'Club', Heart', 'Diamonds')
 - Genre
     - `genre` Have one or many `book`
 
+- Author 
+    - `authors` Have one or many `books`
+
+- Publisher
+    - `publishers` Have one or many `book`
+
+-Location
+    - `location` Have one or many `book`
+
+- Order
+    - `order` Have one or many `book`
+    - `order` Has exactly one `customer`
+    - `customer` Have one or many `order`
+
+- Customer
+    - `customer` Have one or many `order`
+    - `customer` Has exactly one `cart`
+    - `cart` Has exactly one `customer`
+
+- Cart
+    - `cart` Have one or many `book`
+    - `cart` Has exactly one `customer`
+
+- Address
+    - `address` Have one or many `publisher`
+    - `publisher` Have one or many `publisher`
+    - `address` Have one or many `location`
+    - `location` Have one or many `location`
+    - `address` Have one or many `customer`
+    - `customer` Have one or many `address`
 
 
 
 
-    
+
+
+
+### Step 3. Define Columns 
+
+#### Book
+
+| id | title       | publish_date     | price  | auhtor_id |
+|----|-------------|------------------|--------|
+| 1  |
+
+#### Genre
+
+| id | name       |
+|----|------------|
+
+#### Author
+
+| id | name       | website     | phone   | address                             |
+|----|------------|-------------|---------|-------------------------------------|
+
+
+#### Publisher 
+
+| id | name       | website     | phone   | address                             |
+|----|------------|-------------|---------|-------------------------------------|
+
+
+#### Location 
+
+| id | name       | code     | phone   | address                             |
+|----|------------|----------|---------|-------------------------------------|
+
+
+#### Order 
+
+| id | date_placed       | 
+|----|-------------------|
+
+#### Customer (User) *CC doesnt info get stored*
+
+| id | first_name         | last_name                 | title           | email    | hashed_and_salted_password  | shipping_address     | billing_address| credit_card    |
+|----|-------------------|---------------------------|-----------------|----------|-----------------------------|----------------------|----------------|----------------|
+
+#### Cart
+
+| id | 
+|----|
+
