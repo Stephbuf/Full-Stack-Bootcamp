@@ -1,0 +1,14 @@
+table, td {
+    border: 1px solid black;
+
+}
+
+table {
+    border-collapse: collapse;
+    width: 300px;
+}
+
+.blue{
+    background-color: salmon;
+    color:white;
+}

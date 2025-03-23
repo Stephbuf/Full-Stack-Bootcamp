@@ -9,3 +9,32 @@
 <ul>
   <li *ngFor="let name of studentNames">{{ name }}</li>
 </ul>
+
+<!-- Property Data Binding-->
+
+<img [src]="imageUrl" width="200">
+
+<!--Event Data Binding-->
+<br><br>
+<button type="button" (click)="showLagos()"> Lagos, Portugal</button>
+<button type="button" (click)="showPeaceBridge()"> Calgary Peace Bridge</button>
+
+<!-- Attribute Data Binding-->
+<table>
+  <tr>
+    <td>1</td>
+    <td [attr.colspan]="numColSpan">2</td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>4</td>
+    <td>5</td>
+  </tr>
+</table>
+
+<!--Class Binding-->
+<div [class]="blueClass">Hello from the other side</div>
+
+
+<!--Style Binding-->
+<div [style.background-color]="bgColor">Hello again from the other side</div>
