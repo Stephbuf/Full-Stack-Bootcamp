@@ -15,6 +15,8 @@ export class AppComponent {
   numColSpan=2;
   blueClass = 'blue';
   bgColor = "pink";
+  hasError: boolean = true;
+  currentTab = 3;
 //constructor
 
 

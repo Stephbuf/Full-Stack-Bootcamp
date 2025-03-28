@@ -12,3 +12,13 @@ table {
     background-color: salmon;
     color:white;
 }
+
+.blue, .blue-bg {
+    background-color: lightpink;
+    color:white;
+}
+
+.red-bg{
+    background-color: plum ;
+    color:white;
+}
