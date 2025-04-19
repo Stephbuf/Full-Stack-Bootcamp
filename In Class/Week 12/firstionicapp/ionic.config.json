@@ -1,0 +1,7 @@
+{
+  "name": "firstionicapp",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
