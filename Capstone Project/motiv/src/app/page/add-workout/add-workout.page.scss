@@ -1,0 +1,85 @@
+
+ion-content {
+    --background: #fafafa;
+  
+    &::part(scroll) {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100%; // critical for centering inside scroll container
+    }
+  
+    .form-wrapper {
+      width: 100%;
+      padding: 2rem;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  
+    .add-workout-form {
+      width: 100%;
+      max-width: 500px;
+      background: white;
+      padding: 2rem;
+      border-radius: 16px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    }
+  }
+  
+      ion-item {
+        --inner-padding-end: 40px; // Make room for the arrow
+        position: relative;
+  
+        ion-select {
+          width: 100%;
+          text-align: left;
+  
+          &::part(icon) {
+            position: absolute;
+            right: 8px; // ← CHANGED from 16px to 8px
+            top: 50%;
+            transform: translateY(-50%);
+            pointer-events: none;
+            color: var(--ion-color-medium);
+          }
+        }
+  
+        ion-input {
+          font-size: 1rem;
+          color: #333;
+        }
+  
+        &:focus-within {
+          --box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+        }
+      }
+  
+      .error {
+        color: #d9534f;
+        font-size: 0.85rem;
+        margin: -1rem 0 1rem 0.5rem;
+      }
+  
+      ion-button {
+        --background: linear-gradient(135deg, #5D99CE, #9DD5C7);
+        --color: white;
+        --border-radius: 24px;
+        --box-shadow: none;
+        margin: 0;           // <-- Remove default margin
+        padding: 10px;          // <-- Optional if inner spacing looks off
+        border: none;        // <-- Ensure no default border
+        width: 100%;         // <-- Ensures full width to fill parent
+        overflow: hidden;    // <-- Hides outer glow or rounding artifacts
+  
+        &:hover {
+          transform: translateY(-1px);
+          box-shadow: 0 6px 16px rgba(93, 153, 206, 0.6);
+        }
+  
+        &:disabled {
+          opacity: 0.5;
+          pointer-events: none;
+        }
+      }
+    

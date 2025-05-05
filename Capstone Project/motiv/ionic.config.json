@@ -1,0 +1,7 @@
+{
+  "name": "motiv+",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

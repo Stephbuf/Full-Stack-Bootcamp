@@ -1,0 +1,212 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap');
+
+$number-of-text: 8;
+$number-of-particle: 12;
+$width: 40px;
+$height: 40px;
+
+$modern-colors: (
+    #A9452D, // Burnt Terracotta (W)
+    #D17856, // Dusty Coral (E)
+    #F49C8D, // Soft Rose (L)
+    #F3DED1, // Blush Sand (C)
+    #F0E1D2, // Warm Beige (O)
+    #D58C2F, // Golden Ochre (M)
+    #FFB7B2  // Peach Blush (E)
+);
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background: #FFF;
+  position: relative;
+  overflow: hidden;
+  font-size: 100%;
+  text-align: center;
+}
+
+.criterion {
+  font-size: 1.6rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  height: 0;
+  width: 0;
+  transform: translate(-20px, -20px);
+}
+
+.background {
+  position: absolute;
+  top: 0;
+  height: 100vh;
+  width: 0;
+  animation: background-animation 2s ease-in-out 4s 1 forwards;
+}
+
+@for $i from 0 through ($number-of-text - 1) {
+  .background#{$i} {
+    left: #{12.5% * $i};
+    height: 100vh;
+    background-color: nth($modern-colors, ($i % length($modern-colors)) + 1);
+  }
+
+  .text#{$i} {
+    position: absolute;
+    width: $width;
+    line-height: $height;
+    opacity: 0;
+    overflow: hidden;
+    left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2));
+    top: 0;
+    animation: text-animation-#{$i} 1s ease-in-out 1s + ($i * 200ms) 1 forwards,
+               text2-animation-#{$i} 2s ease-in-out 5s 1 forwards;
+
+    &::after {
+      z-index: -1;
+      content: '';
+      display: inline-block;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 0;
+      height: $height;
+      animation: text-after-animation-#{$i} 2s ease-in-out 3s 1 forwards;
+      background-color: nth($modern-colors, ($i % length($modern-colors)) + 1);
+    }
+  }
+
+  .frame#{$i} {
+    position: absolute;
+    width: $width;
+    height: $height;
+    border-radius: 50%;
+    opacity: 0;
+    left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2));
+    top: 0;
+    animation: frame-animation-#{$i} 1s ease-in-out ($i * 200ms) 1 forwards;
+    background-color: nth($modern-colors, ($i % length($modern-colors)) + 1);
+  }
+
+  @keyframes frame-animation-#{$i} {
+    0% {
+      transform: translateY(-1000px);
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.8;
+    }
+    100% {
+      transform: translateY(0);
+      opacity: 0;
+    }
+  }
+
+  @keyframes text-animation-#{$i} {
+    0% {
+      transform: scale(0);
+      opacity: 0;
+    }
+    50% {
+      transform: scale(3);
+    }
+    100% {
+      transform: scale(1);
+      opacity: 1;
+    }
+  }
+
+  @keyframes text-after-animation-#{$i} {
+    0% {
+      width: 0;
+      opacity: 1;
+    }
+    50% {
+      width: $width;
+      opacity: 1;
+    }
+    100% {
+      left: $width;
+      opacity: 0;
+    }
+  }
+
+  @keyframes text2-animation-#{$i} {
+    @if $i != $number-of-text - 1 {
+      0% {
+        left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2));
+        opacity: 1;
+      }
+      50% {
+        left: calc((#{$width} * (#{$i + 1} - #{$number-of-text / 2})) + (#{$width} / 2));
+        opacity: 0;
+      }
+      100% {
+        left: calc((#{$width} * (#{$i + 1} - #{$number-of-text / 2})) + (#{$width} / 2));
+        opacity: 0;
+      }
+    } @else {
+      0% {
+        left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2));
+        opacity: 1;
+        top: 0;
+        transform: scale(1);
+      }
+      50% {
+        left: calc((#{$width} * (#{$i + 1} - #{$number-of-text / 2})) + (#{$width} / 2));
+        opacity: 1;
+        transform: scale(1);
+      }
+      65% {
+        top: 0;
+        transform: scale(1);
+      }
+      70% {
+        transform: scale(3) rotate(90deg);
+        top: -30px;
+      }
+      75% {
+        left: calc((#{$width} * (#{$i + 1} - #{$number-of-text / 2})) + (#{$width} / 2));
+        top: 0;
+        opacity: 1;
+        transform: scale(2) rotate(90deg);
+      }
+      85% {
+        left: calc((#{$width} * (#{$i + 1} - #{$number-of-text / 2})) + (#{$width} / 2));
+      }
+      100% {
+        left: 1000px;
+        opacity: 0;
+        transform: scale(2) rotate(90deg);
+      }
+    }
+  }
+
+  @for $j from 0 through ($number-of-particle - 1) {
+    .particle#{$i}#{$j} {
+      position: absolute;
+      width: $width;
+      height: $height;
+      border-radius: 50%;
+      left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2));
+      opacity: 0;
+      background-color: nth($modern-colors, ($i % length($modern-colors)) + 1);
+      animation: particle-animation-#{$i}-#{$j} 1s ease-in-out 1s + ($i * 200ms) 1 forwards;
+    }
+
+    @keyframes particle-animation-#{$i}-#{$j} {
+      0% {
+        left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2));
+        top: 0;
+        opacity: 0;
+        transform: scale(1);
+      }
+      100% {
+        left: calc((#{$width} * (#{$i} - #{$number-of-text / 2})) + (#{$width} / 2) + cos($j * 360 / $number-of-particle) * 100px);
+        top: calc(sin($j * 360 / $number-of-particle) * 100px);
+        opacity: 1;
+        transform: scale(0);
+      }
+    }
+  }
+}
+
+

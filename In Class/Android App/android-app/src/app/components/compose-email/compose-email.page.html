@@ -1,0 +1,43 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Compose Email</ion-title>
+  </ion-toolbar>
+</ion-header>
+ 
+<ion-content class="ion-padding">
+  <!--<form [formGroup]="emailForm">
+    <ion-item>
+      <ion-label position="stacked">To (comma-separated)</ion-label>
+      <ion-input formControlName="to" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="stacked">Cc</ion-label>
+      <ion-input formControlName="cc" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="stacked">Bcc</ion-label>
+      <ion-input formControlName="bcc" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="stacked">Subject</ion-label>
+      <ion-input formControlName="subject" type="text"></ion-input>
+    </ion-item>
+ 
+    <ion-item>
+      <ion-label position="stacked">Body</ion-label>
+      <ion-textarea formControlName="body"></ion-textarea>
+    </ion-item>
+ 
+    <ion-item lines="none">
+      <ion-label>HTML?</ion-label>
+      <ion-checkbox slot="end" formControlName="isHtml"></ion-checkbox>
+    </ion-item>
+  </form>-->
+  <ion-button expand="full" (click)="sendEmail()">Send Email</ion-button>
+  <ion-button fill="outline" expand="full" (click)="openNativeSettings()"class="ion-margin-top">Open Native Settings</ion-button>
+
+</ion-content> 
+ 

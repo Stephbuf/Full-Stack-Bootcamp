@@ -1,0 +1,19 @@
+<ion-header [translucent]="true">
+
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngFor="let text of texts; let i = index" [ngClass]="'background' + i" class="background"></div>
+
+  <div class="criterion">
+    <div *ngFor="let text of texts; let i = index" [ngClass]="'text' + i" class="text">
+      {{ text }}
+    </div>
+
+    <div *ngFor="let text of texts; let i = index" [ngClass]="'frame' + i" class="frame"></div>
+
+    <ng-container *ngFor="let text of texts; let i = index">
+      <div *ngFor="let j of particleArray" [ngClass]="'particle' + i + j" class="particle"></div>
+    </ng-container>
+  </div>
+</ion-content>
